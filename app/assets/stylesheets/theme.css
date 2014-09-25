@@ -878,11 +878,11 @@ body.boxed .site-wrapper {
   }
 }
 .search-box .form-group {
-  margin-bottom: 24px;
+  margin-bottom: 0px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .search-box .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 0px;
   }
 }
 /*
