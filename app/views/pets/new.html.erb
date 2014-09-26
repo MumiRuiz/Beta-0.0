@@ -65,35 +65,56 @@
                    <%= f.text_field :breed, class: "form-control"%>
                   </div>
                 </fieldset>
-
+<!-- 
                  <fieldset>
                   <label>Tipo<span class="required">*</span></label>
                   <div>
                    <%= f.text_field :type, class: "form-control"%>
                   </div>
+                </fieldset> -->
+
+                 <fieldset>
+                  <label>Genero<span class="required">*</span></label>
+                  <div>
+                   <%= f.text_field :gender, class: "form-control"%>
+                  </div>
                 </fieldset>
 
+                <fieldset>
+                  <label>Tamaño<span class="required">*</span></label>
+                  <div>
+                   <%= f.text_field :size, class: "form-control"%>
+                  </div>
+                </fieldset>
 
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :size %><br>
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :special_reeds %><br>
-    <%= f.text_field :special_reeds %>
-  </div>
-  <div class="field">
-    <%= f.label :instituion_id %><br>
-    <%= f.text_field :instituion_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+                 <fieldset>
+                  <label>special_reeds<span class="required">*</span></label>
+                  <div>
+                   <%= f.text_field :special_reeds, class: "form-control"%>
+                  </div>
+                </fieldset>
+
+              <!--    <fieldset>
+                  <label>Fundación<span class="required">*</span></label>
+                  <div>
+                   <%= f.text_field :instituion_id , class: "form-control"%>
+                  </div>
+                </fieldset> -->
+
+
+
+
+  <div class="field account-sign-in">
+                    <p>
+                      
+                      <%= f.submit "Cargar Mascota", class: 'btn btn-primary btn-sm' %>
+
+                    </p>
+
+                    
+                  </div>
 <% end %>
+
 <%= link_to 'Back', pets_path %>
 
 
