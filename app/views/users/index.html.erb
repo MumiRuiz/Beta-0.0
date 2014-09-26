@@ -1,12 +1,12 @@
-<h1>Listing users</h1>
-<%= link_to 'New User', new_user_path, class: 'button' %>
+<h1>Usuarios</h1>
+<%= link_to 'Nuevo Usuario', new_user_path, class: 'button' %>
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nombre</th>
       <th>Email</th>
-      <th>Location</th>
-      <th>Description</th>
+      <th>Ubicación</th>
+     
       <th></th>
       <th></th>
       <th></th>
@@ -18,11 +18,10 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= user.location %></td>
-        <td><%= user.description %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.country_id %></td>
+        <td><%= link_to 'Mostrar', user %></td>
+        <td><%= link_to 'Editar', edit_user_path(user) %></td>
+        <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Esta seguro que desea eliminar su cuenta?' } %></td>
       </tr>
     <% end %>
   </tbody>

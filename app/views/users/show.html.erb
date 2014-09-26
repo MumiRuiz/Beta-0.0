@@ -1,5 +1,5 @@
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @user.name %>
 </p>
 
@@ -9,14 +9,11 @@
 </p>
 
 <p>
-  <strong>Location:</strong>
-  <%= @user.location %>
+  <strong>Ubicación:</strong>
+  <%= @user.country_id %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @user.description %>
-</p>
 
-<%= link_to 'Edit', edit_user_path(@user), class: 'button' %> 
+
+<%= link_to 'Editar', edit_user_path(@user), class: 'button' %> 
 

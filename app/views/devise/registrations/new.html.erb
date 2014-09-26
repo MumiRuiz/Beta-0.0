@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2>Regístrate</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -6,11 +6,91 @@
   <div><%= f.label :name %><br />
   <%= f.text_field :name, autofocus: true %></div>
 
-  <div><%= f.label :location %><br />
-  <%= f.text_field :location %></div>
+  <div>
+    <%= f.label :country_id %><br />
+    <%= select_tag("user[country_id]", options_for_select(['Colombia', 'Colombia'])) %>
+  </div>
 
-  <div><%= f.label :description %><br />
-  <%= f.text_area :description %></div>
+  <!-- <div>
+    <%= f.label :region_id %><br />
+    <%= select_tag("user[region_id]", options_for_select(
+
+      ['Amazonas', 'Amazonas'],
+      ['Antioquia', 'Antioquia'],
+      ['Arauca', 'Arauca'],
+      ['Atlántico', 'Atlántico'],
+      ['Bolivar', 'Bolivar'],
+      ['Boyacá', 'Boyacá'],
+      ['Caldas', 'Caldas'],
+      ['Caquetá', 'Caquetá'],
+      ['Casanare', 'Casanare'],
+      ['Cauca', 'Cauca'],
+      ['Cesar', 'Cesar'],
+      ['Chocó', 'Chocó'],
+      ['Córdoba', 'Córdoba'],
+      ['Cundinamarca', 'Cundinamarca'],
+      ['Guainía', 'Guainía'],
+      ['Guaviare', 'Guaviare'],
+      ['Huila', 'Huila'],
+      ['La Guajira', 'La Guajira'],
+      ['Magdalena', 'Magdalena'],
+      ['Meta', 'Meta'],
+      ['Nariño', 'Nariño'],
+      ['Norte de Santander', 'Norte de Santander'],
+      ['Putumayo', 'Putumayo'],
+      ['Quindío', 'Quindío'],
+      ['Risaralda', 'Risaralda'],
+      ['San Andrés y Providencia', 'San Andrés y Providencia'],
+      ['Santander', 'Santander'],
+      ['Sucre', 'Sucre'],
+      ['Tolima', 'Tolima'],
+      ['Valle del Cauca', 'Valle del Cauca'],
+      ['Vaupés', 'Vaupés'],
+      ['Vichada', 'Vichada']
+      )) %>
+  </div> 
+
+  <div>
+    <%= f.label :city_id %><br />
+    <%= select_tag("user[city_id]", options_for_select(
+      ['Arauca', 'Arauca'],
+      ['Armenia', 'Armenia'],
+      ['Barranquilla', 'Barranquilla'],
+      ['Bogotá', 'Bogotá'],
+      ['Bucaramanga', 'Bucaramanga'],
+      ['Cali', 'Cali'],
+      ['Cartagena de Indias', 'Cartagena de Indias'],
+      ['Cucutá', 'Cucutá'],
+      ['Florencia', 'Florencia'],
+      ['Ibagué', 'Ibagué'],
+      ['Inírida', 'Inírida'],
+      ['Leticia', 'Leticia'],
+      ['Manizalez', 'Manizalez'],
+      ['Medellín', 'Medellín'],
+      ['Mitú', 'Mitú'],
+      ['Mocoa', 'Mocoa'],
+      ['Montería', 'Montería'],
+      ['Neiva', 'Neiva'],
+      ['Pasto', 'Pasto'],
+      ['Pereira', 'Pereira'],
+      ['Popayán', 'Popayán'],
+      ['Puerto Carreño', 'Puerto Carreño'],
+      ['Quibdó', 'Quibdó'],
+      ['Riohacha', 'Riohacha'],
+      ['San Andrés', 'San Andrés'],
+      ['San José del Guaviare', 'San José del Guaviare'],
+      ['Santa Marta', 'Santa Marta'],
+      ['Sincelejo', 'Sincelejo'],
+      ['Tunja', 'Tunja'],
+      ['Valledupar', 'Valledupar'],
+      ['Villavicencio', 'Villavicencio'],
+      ['Yopal'],['Yopal'],
+  
+
+    )) %>
+  </div>
+-->
+
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
