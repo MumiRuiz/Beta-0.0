@@ -56,7 +56,8 @@ body {
   margin: 0;
 }
 body.bg1 {
-  background: #ffffff url(../images/bg1.jpg) 50% 0 no-repeat;
+  background: #ffffff;
+  background-image: image-url("bg1.jpg") 50% 0 no-repeat;
   -webkit-background-size: contain;
   background-size: contain;
 }
@@ -672,7 +673,8 @@ body.boxed .site-wrapper {
 // --------------------------------------------------
 */
 .slider-holder {
-  background: #b4b4b4 url(../images/samples/bg1.jpg) 50% 0 no-repeat fixed;
+  background: #b4b4b4; 
+  background-image: image-url("bg1.jpg") 50% 0 no-repeat fixed;
   -webkit-background-size: cover 100%;
   background-size: cover 100%;
   position: relative;
@@ -891,7 +893,8 @@ body.boxed .site-wrapper {
 */
 /* Page Heading */
 .page-heading {
-  background: #b4b4b4 url(../images/samples/bg1.jpg) 50% 0 no-repeat fixed;
+  background: #b4b4b4;
+  background-image:  image-url("bg1.jpg") 50% 0 no-repeat fixed;
   -webkit-background-size: cover 100%;
   background-size: cover 100%;
   position: relative;
@@ -998,7 +1001,7 @@ body.boxed .site-wrapper {
 .section {
   margin: 0 -100%;
   padding: 75px 100%;
-  background-image: url(../images/section-bg.jpg);
+  background-image: image-url("section-bg.jpg");
   background-repeat: repeat-x;
   background-position: 0 0;
   background-color: #fafafa;

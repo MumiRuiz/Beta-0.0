@@ -7,29 +7,29 @@
     <title><%= content_for?(:title) ? yield(:title) : "Adoptame" %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "modernizr" %>
     <%= csrf_meta_tags %>
 
      <!-- Base + Vendors CSS -->
-     <!--  <link rel="stylesheet" href="assets/bootstrap.min.css">
+      <!--  <link rel="stylesheet" href="assets/bootstrap.min.css">
       <link rel="stylesheet" href="assets/font-awesome.css">
       <link rel="stylesheet" href="assets/entypo.css">
        <link rel="stylesheet" href="assets/owl.carousel.css" media="screen">
       <link rel="stylesheet" href="assets/owl.theme.css" media="screen">
       <link rel="stylesheet" href="assets/magnific-popup.css" media="screen"> 
-      <link rel="stylesheet" href="assets/flexslider.css" media="screen">-->
+      <link rel="stylesheet" href="assets/flexslider.css" media="screen"> -->
 
       <!-- Theme CSS-->
       <!-- <link rel="stylesheet" href="css/theme.css">
       <link rel="stylesheet" href="css/theme-elements.css">
-      <link rel="stylesheet" href="css/animate.min.css">
+      <link rel="stylesheet" href="css/animate.min.css"> -->
 
 
       <link rel="shortcut icon" href="images/favicon.ico">
       <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
       <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
       <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png"> -->
+      <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
 
 
   </head>
@@ -57,7 +57,7 @@
                 
             </li>
             <li>
-              <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+              <%= link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete %>
             </li>
             <% else %>
               <li class="active">
@@ -74,7 +74,7 @@
             <li class= "divider"></li>
             <!-- 
             <li>
-              <%= link_to 'Users', users_path %>
+              <%#= link_to 'Users', users_path %>
             </li> -->
             
           <!--   <li class="dropdown"><a class="dropdown-toggle" data-target="#" href="contact.html">Contact</a>
@@ -111,7 +111,7 @@
             <div class="head-info">
               <ul class="head-info-list">
                 <!-- <li><span>Call us on:</span> +1 (234) 567890</li> -->
-                <li><span>Email:</span> <a href="mailto:petsitter@dan-fisher.com">info@adoptame.co</a></li>
+                <li><span>Email:</span> <a href="info@adoptame.co">info@adoptame.co</a></li>
               </ul>
               <ul class="social-links">
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -275,7 +275,7 @@
               </div>
               <div class="col-sm-6 col-md-8">
                 <div class="social-links-wrapper">
-                  <span class="social-links-txt">Keep in Touch</span>
+                  <span class="social-links-txt">Síguenos</span>
                   <ul class="social-links social-links__light">
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -301,7 +301,7 @@
   
   <!-- Javascript Files
   ================================================== -->
-  <script src="vendor/jquery-1.11.0.min.js"></script>
+  <!--<script src="vendor/jquery-1.11.0.min.js"></script>
   <script src="vendor/jquery-migrate-1.2.1.min.js"></script>
   <script src="vendor/bootstrap.js"></script>
   <script src="vendor/jquery.flexnav.min.js"></script>
@@ -317,7 +317,7 @@
   <script src="vendor/jquery.stellar.min.js"></script>
   <script src="vendor/flexslider/jquery.flexslider-min.js"></script>
 
-  <script src="js/custom.js"></script>
+  <script src="js/custom.js"></script>-->
 
   <script>
     jQuery(function($){
