@@ -260,7 +260,7 @@
                           </div>
                         </div>
                         <div class="col-md-4">
-                          <button type="submit" class="btn btn-success btn-block">Subscribe</button>
+                          <button type="submit" class="btn btn-success btn-block">Suscríbete</button>
                         </div>
                       </div>
                     </form>
@@ -323,26 +323,25 @@
 
   <script src="js/custom.js"></script>-->
 
-  <script>
-    jQuery(function($){
-      $('body').addClass('loading');
-    });
-    
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "fade",
-        controlNav: true,
-        directionNav: false,
-        prevText: "",
-        nextText: "",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
-
     </div>
     <%= javascript_include_tag "application" %>
+    <script>
+      jQuery(function($){
+        $('body').addClass('loading');
+      });
+      
+      $(window).load(function(){
+        $('.flexslider').flexslider({
+          animation: "fade",
+          controlNav: true,
+          directionNav: false,
+          prevText: "",
+          nextText: "",
+          start: function(slider){
+            $('body').removeClass('loading');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
