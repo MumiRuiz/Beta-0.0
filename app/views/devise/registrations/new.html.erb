@@ -1,107 +1,110 @@
-<h2>Regístrate</h2>
+<!-- Page Heading -->
+      <section class="page-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8col-md-offset-2-6">
+             <h1>Regístrate</h1>
+            </div>
+            <div class="col-md-6">
+              <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pets</a></li>
+                <li class="active">Ingresar nueva Macota</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Heading / End -->
+
+      <section class="page-content">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+              
+              <fieldset>
+                  <label>Have an account?</label>
+                  <div class="field account-sign-in">
+                    <p>
+                      <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-key"></i> Sign in</a>
+                    </p>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true %></div>
+                    <div class="alert alert-info alert-dismissable">
+                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="fa fa-times"></i></button>
+                      If you don‘t have an account you can create one below by entering your email address. A password will be  automatically emailed to you.
+                    </div>
+                  </div>
+                </fieldset>
 
-  <div>
-    <%= f.label :country_id %><br />
-    <%= select_tag("user[country_id]", options_for_select(['Colombia', 'Colombia'])) %>
-  </div>
+                <fieldset>
+                  <label>Nombre <span class="required">*</span></label>
+                  <div>
+                   <%= f.text_field :name, class: "form-control"%>
+                  </div>
+                </fieldset>
 
-  <!-- <div>
-    <%= f.label :region_id %><br />
-    <%= select_tag("user[region_id]", options_for_select(
+                <fieldset>
+                  <label>Your Email <span class="required">*</span></label>
+                  <div>
+                  <%= f.text_field :email, class: "form-control"%>
+                  </div>
+                </fieldset>
 
-      ['Amazonas', 'Amazonas'],
-      ['Antioquia', 'Antioquia'],
-      ['Arauca', 'Arauca'],
-      ['Atlántico', 'Atlántico'],
-      ['Bolivar', 'Bolivar'],
-      ['Boyacá', 'Boyacá'],
-      ['Caldas', 'Caldas'],
-      ['Caquetá', 'Caquetá'],
-      ['Casanare', 'Casanare'],
-      ['Cauca', 'Cauca'],
-      ['Cesar', 'Cesar'],
-      ['Chocó', 'Chocó'],
-      ['Córdoba', 'Córdoba'],
-      ['Cundinamarca', 'Cundinamarca'],
-      ['Guainía', 'Guainía'],
-      ['Guaviare', 'Guaviare'],
-      ['Huila', 'Huila'],
-      ['La Guajira', 'La Guajira'],
-      ['Magdalena', 'Magdalena'],
-      ['Meta', 'Meta'],
-      ['Nariño', 'Nariño'],
-      ['Norte de Santander', 'Norte de Santander'],
-      ['Putumayo', 'Putumayo'],
-      ['Quindío', 'Quindío'],
-      ['Risaralda', 'Risaralda'],
-      ['San Andrés y Providencia', 'San Andrés y Providencia'],
-      ['Santander', 'Santander'],
-      ['Sucre', 'Sucre'],
-      ['Tolima', 'Tolima'],
-      ['Valle del Cauca', 'Valle del Cauca'],
-      ['Vaupés', 'Vaupés'],
-      ['Vichada', 'Vichada']
-      )) %>
-  </div> 
+                <fieldset class="fieldset-job_type">
+                      <label>País<span class="required">*</span></label>
+                      <div class="field select-style">
+                        <select name="job_type" id="job_type" class="form-control">
+                          <option value="unspecified">Unspecified</option>
+                          <option value="pet-sitter">Pet Sitter</option>
+                          <option value="dog-sitter">Dog Sitter</option>
+                          <option value="cat-sitter">Cat Sitter</option>
+                          <option value="dog-walker">Dog Walker</option>
+                        </select>
+                      </div>
+                    </fieldset>
 
-  <div>
-    <%= f.label :city_id %><br />
-    <%= select_tag("user[city_id]", options_for_select(
-      ['Arauca', 'Arauca'],
-      ['Armenia', 'Armenia'],
-      ['Barranquilla', 'Barranquilla'],
-      ['Bogotá', 'Bogotá'],
-      ['Bucaramanga', 'Bucaramanga'],
-      ['Cali', 'Cali'],
-      ['Cartagena de Indias', 'Cartagena de Indias'],
-      ['Cucutá', 'Cucutá'],
-      ['Florencia', 'Florencia'],
-      ['Ibagué', 'Ibagué'],
-      ['Inírida', 'Inírida'],
-      ['Leticia', 'Leticia'],
-      ['Manizalez', 'Manizalez'],
-      ['Medellín', 'Medellín'],
-      ['Mitú', 'Mitú'],
-      ['Mocoa', 'Mocoa'],
-      ['Montería', 'Montería'],
-      ['Neiva', 'Neiva'],
-      ['Pasto', 'Pasto'],
-      ['Pereira', 'Pereira'],
-      ['Popayán', 'Popayán'],
-      ['Puerto Carreño', 'Puerto Carreño'],
-      ['Quibdó', 'Quibdó'],
-      ['Riohacha', 'Riohacha'],
-      ['San Andrés', 'San Andrés'],
-      ['San José del Guaviare', 'San José del Guaviare'],
-      ['Santa Marta', 'Santa Marta'],
-      ['Sincelejo', 'Sincelejo'],
-      ['Tunja', 'Tunja'],
-      ['Valledupar', 'Valledupar'],
-      ['Villavicencio', 'Villavicencio'],
-      ['Yopal'],['Yopal'],
-  
+                <fieldset>
+                  <label>Password <span class="required">*</span></label>
+                  <div>
+                 <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+                </fieldset>
 
-    )) %>
-  </div>
--->
+                <fieldset>
+                  <label>Password Confirmation <span class="required">*</span></label>
+                  <div>
+                 <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+                  
+                </fieldset>
+
+                  <div class="field account-sign-in">
+                    <p>
+                      <i class="fa fa-key"></i>
+
+                      <%= f.submit "Sign up", class: 'btn btn-primary btn-sm' %>
+
+                    </p>
+
+                    
+                  </div>
+
+              <% end %>
+
+              <%= render "devise/shared/links" %>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Page Content / End -->
 
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Sign up", class: 'button' %></div>
-<% end %>
 
-<%= render "devise/shared/links" %>

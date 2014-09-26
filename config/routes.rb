@@ -1,4 +1,8 @@
 Micropost::Application.routes.draw do
+  resources :pets
+
+  resources :institutions
+
   get "static_pages/faq"
   get "static_pages/about"
   get "static_pages/services"
