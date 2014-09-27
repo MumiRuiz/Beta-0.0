@@ -27,6 +27,7 @@
 //= require jquery.appear
 //= require jquery.stellar.min
 //= require jquery.flexslider-min
+//= require jquery.validate
 //= require custom
 //= require turbolinks
 //= require_tree .
