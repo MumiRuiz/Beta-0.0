@@ -673,7 +673,7 @@ body.boxed .site-wrapper {
 // --------------------------------------------------
 */
 .slider-holder {
-  background: #b4b4b4; 
+  background: transparent; 
   background-image: image-url("bg1.jpg") 50% 0 no-repeat fixed;
   -webkit-background-size: cover 100%;
   background-size: cover 100%;
