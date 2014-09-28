@@ -1,0 +1,47 @@
+<h1>Listing pet_trues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Kind</th>
+      <th>Gender</th>
+      <th>Size</th>
+      <th>Story</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Region</th>
+      <th>User</th>
+      <th>Institution</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pet_trues.each do |pet_true| %>
+      <tr>
+        <td><%= pet_true.name %></td>
+        <td><%= pet_true.age %></td>
+        <td><%= pet_true.kind %></td>
+        <td><%= pet_true.gender %></td>
+        <td><%= pet_true.size %></td>
+        <td><%= pet_true.story %></td>
+        <td><%= pet_true.city %></td>
+        <td><%= pet_true.country %></td>
+        <td><%= pet_true.region %></td>
+        <td><%= pet_true.user %></td>
+        <td><%= pet_true.institution %></td>
+        <td><%= link_to 'Show', pet_true %></td>
+        <td><%= link_to 'Edit', edit_pet_true_path(pet_true) %></td>
+        <td><%= link_to 'Destroy', pet_true, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pet true', new_pet_true_path %>

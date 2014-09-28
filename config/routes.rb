@@ -1,4 +1,6 @@
 Micropost::Application.routes.draw do
+  resources :pet_trues
+
   resources :pets
 
   resources :institutions
