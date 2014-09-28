@@ -1,5 +1,5 @@
 class Pet < ActiveRecord::Base
-  belongs_to :instituion
+  belongs_to :institution
   belongs_to :user
 
 end
