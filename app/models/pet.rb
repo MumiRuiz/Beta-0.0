@@ -1,5 +1,14 @@
 class Pet < ActiveRecord::Base
-	has_attached_file :photo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-	validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
+<<<<<<< HEAD
+  belongs_to :institution
+=======
+<<<<<<< HEAD
+  belongs_to :user
+  belongs_to :institution
+=======
   belongs_to :instituion
+>>>>>>> c26f3daaa82ee87338cf538a1452edfcd90145ae
+  belongs_to :user
+
+>>>>>>> d53d2ac000b7613c87ec512d3f5c18386480a2e4
 end
