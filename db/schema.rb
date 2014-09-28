@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20140926061255) do
     t.datetime "updated_at"
   end
 
-  add_index "pets", ["institution_id"], name: "index_pets_on_instituion_id"
+  add_index "pets", ["instituion_id"], name: "index_pets_on_instituion_id"
 
   create_table "posts", force: true do |t|
     t.text     "content"
