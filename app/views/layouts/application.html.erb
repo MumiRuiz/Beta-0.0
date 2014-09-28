@@ -42,8 +42,10 @@
     <!-- Header -->
     <header class="header header-menu-fullw">
 
-      <div class="header-top">
-         <nav class="nav-main hidden-xs" role="navigation">
+      <div class="header-top-right">
+
+        <div class="container">
+         
           <ul id="menu-main" class="nav navbar-nav">
 
 
@@ -53,11 +55,7 @@
 
               <%= link_to current_user.name , edit_user_registration_path, html: {class: "dropdown-toggle"} %>
          
-              <ul class="dropdown-menu">
-                <li><%= link_to 'Editar Perfil', edit_user_registration_path %>
-         </li>
-                <li><%= link_to 'Preguntas', questions_path %></li>
-              </ul>
+              
                 
             </li>
             <li>
@@ -92,7 +90,7 @@
               </ul>
             </li> -->
           </ul>    
-        </nav>
+        </div>
       </div>
 
 <!-- fin de header top -->

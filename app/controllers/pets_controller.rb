@@ -70,6 +70,10 @@ class PetsController < ApplicationController
     # Be sure to update your create() and update() controller methods.
     # Never trust parameters from the scary internet, only allow the white list through.
     def pet_params
+<<<<<<< HEAD
       params.require(:pet).permit(:name, :description, :age, :breed, :type, :gender, :size, :special_reeds, :instituion_id, :photo)
+=======
+      params.require(:pet).permit(:name, :description, :age, :breed, :gender, :size, :special_reeds)
+>>>>>>> b749772acd119d745baad99d2b894be3049ef25c
     end
 end
